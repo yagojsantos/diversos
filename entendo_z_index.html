@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        /* O z-index é responsável pelo cálculo e posicionamento da profundidade dos elementos em relação à tela.
+        Para que ele tenha efeito, os elementos devem ter a propriedade 'position' definidas com outro valor que não o padrão (static).
+        Usando o exemplo abaixo, caso o z-index não fosse definido, a sequência de exibição seria -> verde - na frente, vermelho - meio, azul - fundo.
+        Isso porque, quando não definido, os elementos recebem o valor automaticamente (z-index: auto), pela sequência de criação;
+        Já com as configurações abaixo, a sequência fica -> verde - fundo, vermelho - na frente, azul - meio
+        Quem tem maior valor, fica mais próximo à tela, quem tem menor, fica mais ao fundo. */
+
+        .quadrado{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            border: 1px solid black;
+        }
+        .azul{
+            background-color: blue;
+            top: 100px;
+            z-index: 1;
+        }
+        .vermelho{
+            background-color: red;
+            top: 150px;
+            left: 30px;
+            z-index: 2;
+        }
+        .verde{
+            background-color: green;
+            top: 200px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="quadrado azul">Quadrado 1</div>
+        <div class="quadrado vermelho">Quadrado 2</div>
+        <div class="quadrado verde">Quadrado 3</div>
+    </main>
+    
+</body>
+</html>
