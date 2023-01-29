@@ -18,3 +18,27 @@ function exercicioQuatro(){
     
     })
 }
+function exercicioCinco(){
+    const camp = document.querySelector("#texto");
+    const botao = document.querySelector("#btnContar");
+
+    botao.addEventListener("click",()=>{
+        const texto = camp.value;
+        alert(`Há ${texto.length} caracteres`);
+    })
+
+}
+function exercicioSeis(){
+    const lampada = document.querySelector("#lampada");
+    const botao = document.querySelector("#btn_liga_desliga");
+    botao.addEventListener("click",function (){
+        const imgLampada =  lampada.name;
+        if(imgLampada=="on"){
+            lampada.setAttribute("name","off");
+            lampada.setAttribute("src","imgs/lamp-off.png");
+        } else {
+            lampada.setAttribute("name","on");
+            lampada.setAttribute("src","imgs/lamp-on.png");
+        }
+    })
+}
