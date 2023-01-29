@@ -42,3 +42,28 @@ function exercicioSeis(){
         }
     })
 }
+function exercicioSete(){
+    const lampada = document.querySelector("#lampada");
+    const lamp = lampada;
+    
+    lampada.addEventListener("mouseover",function(evento){
+        evento.target.setAttribute("src","imgs/lamp-on.png");
+    })
+    lampada.addEventListener("mouseout",function(evento){
+        evento.target.setAttribute("src","imgs/lamp-off.png");
+    })
+}
+function exercicioSeteA(){
+    const botaoExibir = document.querySelector("#btnExibir");
+    const botaoLimpar = document.querySelector("#btnLimpar");
+    const campoNome = document.querySelector("#nome");
+    const campoSobreNome = document.querySelector("#sobreNome");
+
+    botaoExibir.addEventListener("click",function(){
+        alert(`Olá ${campoNome.value} ${campoSobreNome.value}!`);
+    });
+    botaoLimpar.addEventListener("click",()=>{
+        campoNome.value="";
+        campoSobreNome.value="";
+    })
+}
