@@ -14,14 +14,14 @@
             document.write(frase);
             pulaLinha();
         }
-        function calculaImc(peso, altura){
+        function calculaImc(altura, peso){
             let imc = peso/(altura*altura);
             return imc;
         }
         let pessoaUm = calculaImc(1.71, 73);
         let pessoaDois = calculaImc(1.72, 68);
         let somaImcs = pessoaUm+pessoaDois;
-        exibir(`A soma do IMC é = ${somaImcs}`);
+        exibir(`A soma dos IMCs é = ${somaImcs}`);
 
     </script>
     
