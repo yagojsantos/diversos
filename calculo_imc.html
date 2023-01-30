@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function exibir(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        function calculaImc(peso, altura){
+            let imc = peso/(altura*altura);
+            return imc;
+        }
+        let pessoaUm = calculaImc(1.71, 73);
+        let pessoaDois = calculaImc(1.72, 68);
+        let somaImcs = pessoaUm+pessoaDois;
+        exibir(`A soma do IMC é = ${somaImcs}`);
+
+    </script>
+    
+</body>
+</html>
