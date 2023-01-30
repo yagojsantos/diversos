@@ -18,10 +18,18 @@
             let imc = peso/(altura*altura);
             return imc;
         }
-        let pessoaUm = calculaImc(1.71, 73);
-        let pessoaDois = calculaImc(1.72, 68);
-        let somaImcs = pessoaUm+pessoaDois;
-        exibir(`A soma dos IMCs é = ${somaImcs}`);
+        // let pessoaUm = calculaImc(1.71, 73);
+        // let pessoaDois = calculaImc(1.72, 68);
+        // let somaImcs = pessoaUm+pessoaDois;
+        // exibir(`A soma dos IMCs é = ${somaImcs}`);
+        // Utilizando o método prompt
+        let nome = prompt("Qual o seu nome?");
+        let altura = prompt(`${nome}, informe sua altura: `);
+        let peso = prompt(`${nome}, informe o seu peso: `);
+
+        let imc = calculaImc(altura,peso);
+
+        alert(`${nome}, o seu IMC é ${imc}`);
 
     </script>
     
