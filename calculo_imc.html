@@ -24,12 +24,21 @@
         // exibir(`A soma dos IMCs é = ${somaImcs}`);
         // Utilizando o método prompt
         let nome = prompt("Qual o seu nome?");
-        let altura = prompt(`${nome}, informe sua altura: `);
-        let peso = prompt(`${nome}, informe o seu peso: `);
-
+        let altura = parseFloat(prompt(`${nome}, informe sua altura: `));
+        let peso = parseFloat(prompt(`${nome}, informe o seu peso: `));
+        let fraseResultado = null;
         let imc = calculaImc(altura,peso);
 
-        alert(`${nome}, o seu IMC é ${imc}`);
+        if (imc < 18.5) {
+            fraseResultado = "abaixo do";
+        }else if (imc > 35) {
+            fraseResultado = "acima do";
+        }else{
+            fraseResultado = "igual ao";
+        }
+
+        alert(`${nome}, o seu IMC é ${imc.toFixed(2)} \nEstá ${fraseResultado} recomendado!`);
+        
 
     </script>
     
