@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="teste">
+    <script>
+        let anosCopa = [];
+        let desde = 1930;
+        let copa = desde;
+        const corpo = document.getElementById("teste");
+        
+        
+        let anoAtual = prompt("Digite o ano que deja!");
+        
+        
+        while(copa<anoAtual){
+            anosCopa.push(copa+=4);
+        }
+        
+        document.write("Os anos de copa foram: ");
+        for (let i = 0; i < anosCopa.length; i++) {
+            teste.innerHTML += `<p>${anosCopa[i]} </p>`;
+            
+        }
+        </script>
+</body>
+</html>
+
+

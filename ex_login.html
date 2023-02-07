@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-bre">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <script>
+            const loginCadastrado = "yago";
+            const senhaCadastrada = "3124ya";
+            const limiteTentativas = 3;
+           
+
+            for (let i = 0; i < limiteTentativas; i++) {
+                
+            let loginInformado = prompt(`Informe o seu Login: `);
+            let senhaInformada = prompt(`Informe a sua senha: `);
+
+            if(loginInformado==loginCadastrado && senhaInformada==senhaCadastrada){
+                alert(`Bem-vindo ao sistema ${loginInformado}!`);
+                break;
+            }else{
+              alert(`Login ou senha inválido(s). Você tem ${limiteTentativas-(i+1)} tentativas.`);
+            }
+            
+            }
+            
+
+        </script>
+    </main>
+    
+</body>
+</html>
