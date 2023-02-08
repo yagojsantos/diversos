@@ -58,12 +58,15 @@ function exercicioSeteA(){
     const botaoLimpar = document.querySelector("#btnLimpar");
     const campoNome = document.querySelector("#nome");
     const campoSobreNome = document.querySelector("#sobreNome");
+    const elementoSaidaNome = document.querySelector("#nome-completo");
 
     botaoExibir.addEventListener("click",function(){
         alert(`Olá ${campoNome.value} ${campoSobreNome.value}!`);
+        elementoSaidaNome.innerHTML = `Olá ${campoNome.value} ${campoSobreNome.value}!`;
     });
     botaoLimpar.addEventListener("click",()=>{
         campoNome.value="";
         campoSobreNome.value="";
+        elementoSaidaNome.innerHTML="";
     })
 }
