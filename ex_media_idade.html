@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Idade</title>
+</head>
+<body>
+    <main>
+        <script>
+            
+            let idades = 0;
+            let todasIdades = 0;
+            let numPessoas = parseInt(prompt(`Insira a quantidade de pessoas!`));
+            
+            while (isNaN(numPessoas)||numPessoas<=0) {
+                numPessoas = parseInt(prompt(`Insira uma quantidade de pessoas válida!`));
+            }
+            
+            for (let i = 1; i <= numPessoas; i++) {
+                idades = parseInt(prompt(`Digite a idade da ${i}° pessoas:`));
+
+                while (isNaN(idades)||idades<=0) {
+                    idades = parseInt(prompt(`Digite uma idade válida:`));
+                }
+
+                todasIdades = todasIdades + idades ; 
+            }
+            let media = todasIdades/numPessoas;
+            alert(`A média da(s) ${numPessoas} idade(s) inserida(s) é de ${media}!`);
+        </script>
+    </main>
+    
+</body>
+</html>
