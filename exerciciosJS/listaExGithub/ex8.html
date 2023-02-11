@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8</title>
+</head>
+<body>
+    <main>
+        <input type="text" name="cpf" id="cpf" onkeypress="saida">
+        <p id="saida-cpf"></p>
+    </main>
+    <script>
+        const campoCpf = document.getElementById("cpf").value;
+        const saidaCpf = document.getElementById("saida-cpf");
+
+       function saida(){
+            saidaCpf.innerHTML=campoCpf;
+       }
+    </script>
+</body>
+</html>
