@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenhando</title>
+</head>
+<body>
+    <main>
+        <canvas id="tela" width="600px" height="400px"></canvas>
+        <script>
+            const tela = document.querySelector("#tela");
+            const pincel = tela.getContext("2d");
+            
+
+            pincel.fillStyle = "grey";
+            pincel.fillRect(0,0,600,400);
+
+        </script>
+    </main>
+    
+</body>
+</html>
